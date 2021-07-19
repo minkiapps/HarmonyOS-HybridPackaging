@@ -12,6 +12,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
+        AppInitialiserKt.initApp(this);
         Toast.makeText(this, "Launched from Android Launcher", Toast.LENGTH_SHORT).show();
     }
 }

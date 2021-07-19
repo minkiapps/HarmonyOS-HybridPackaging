@@ -1,0 +1,43 @@
+apply plugin: 'com.huawei.ohos.hap'
+apply plugin: 'com.huawei.ohos.decctest'
+//For instructions on signature configuration, see https://developer.harmonyos.com/en/docs/documentation/doc-guides/ide_debug_device-0000001053822404#EN-US_TOPIC_0000001154985555__section1112183053510
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('../signing/minkiappsdefaultdebug.p12')
+            storePassword '000000180E1EBC94421F9F015CDCDFBD2B9F4E1792F825F9AC7615C80BE1B6EF75979CE262A65070'
+            keyAlias = 'minkiapps'
+            keyPassword '00000018C0DEE090A3C166C014756E55C36E6760BF189506632838170E3D5CFE19DF9C9483ACF96D'
+            signAlg = 'SHA256withECDSA'
+            profile file('../signing/hosdevicesDebug.p7b')
+            certpath file('../signing/minkiappsdefaultdebug.cer')
+        }
+    }
+
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 5
+    }
+
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+
+    entryModules "entry"
+}
+
+dependencies {
+    entryImplementation project(':entry')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    testImplementation 'junit:junit:4.13'
+    ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
+}
+decc {
+    supportType = ['html', 'xml']
+}

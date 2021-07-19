@@ -1,0 +1,46 @@
+apply plugin: 'com.huawei.ohos.hap'
+
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('../signing/minkiappsdefaultdebug.p12')
+            storePassword '000000180E1EBC94421F9F015CDCDFBD2B9F4E1792F825F9AC7615C80BE1B6EF75979CE262A65070'
+            keyAlias = 'minkiapps'
+            keyPassword '00000018C0DEE090A3C166C014756E55C36E6760BF189506632838170E3D5CFE19DF9C9483ACF96D'
+            signAlg = 'SHA256withECDSA'
+            profile file('../signing/hosdevicesDebug.p7b')
+            certpath file('../signing/minkiappsdefaultdebug.cer')
+        }
+    }
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 5
+    }
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+
+    // AppHybrid
+    legacyApkOptions {
+        signConfig {
+            storeFile file("../../HybridAndroid/signing/minkiapps.jks")
+            // 单独配置的shell apk签名材料
+        }
+        //legacyApk "/Users/mingkangpan/Documents/minki/code/A_H/HybridAppExample/HybridAndroid/app/build/outputs/apk/debug/debug-1.0-entry.apk"
+        legacyApk "../../HybridAndroid/app/build/outputs/apk/debug/debug-entry.apk"
+        // 指向legecyApk文件
+        legacyVersionCode "1" // 与legacyApk的AndroidManifest.xml中配置的android:versionCode保持一致
+        legacyVersionName "1.0" // 与legacyApk的AndroidManifest.xml中配置的android:versionName保持一致
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    testImplementation 'junit:junit:4.13'
+    ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
+}

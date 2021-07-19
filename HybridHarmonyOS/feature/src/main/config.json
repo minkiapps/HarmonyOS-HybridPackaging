@@ -1,0 +1,71 @@
+{
+  "app": {
+    "bundleName": "com.minkiapps.android.hybrid",
+    "vendor": "minkiapps",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    },
+    "apiVersion": {
+      "compatible": 5,
+      "target": 5
+    }
+  },
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+    }
+  },
+  "module": {
+    "package": "com.minkiapps.android.hybrid",
+    "name": "com.minkiapps.android.hybrid.MyApplication",
+    "mainAbility": "com.minkiapps.android.hybrid.MainAbility",
+    "deviceType": [
+      "phone",
+      "tablet"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "feature",
+      "moduleType": "feature",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "orientation": "unspecified",
+        "visible": true,
+        "name": "com.minkiapps.android.hybrid.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "formsEnabled": true,
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "forms": [
+          {
+            "landscapeLayouts": [
+              "$layout:form_image_with_information_widget_2_2"
+            ],
+            "isDefault": true,
+            "scheduledUpdateTime": "10:30",
+            "defaultDimension": "2*2",
+            "name": "widget",
+            "description": "This is a service widget",
+            "colorMode": "auto",
+            "type": "Java",
+            "supportDimensions": [
+              "2*2"
+            ],
+            "portraitLayouts": [
+              "$layout:form_image_with_information_widget_2_2"
+            ],
+            "updateEnabled": true,
+            "updateDuration": 1
+          }
+        ],
+        "launchType": "standard"
+      }
+    ]
+  }
+}
