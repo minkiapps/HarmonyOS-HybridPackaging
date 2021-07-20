@@ -8,37 +8,29 @@
 
     <Image
         ohos:height="match_parent"
-        ohos:width="126vp"
+        ohos:width="match_parent"
         ohos:horizontal_center="true"
-        ohos:image_src="$media:form_image_with_information_widget_default_image_2"
-        ohos:scale_mode="zoom_start"
-        ohos:top_margin="17vp"/>
+        ohos:image_src="$media:sf"
+        ohos:scale_mode="zoom_center"
+        ohos:margin="16vp"/>
 
     <DirectionalLayout
         ohos:height="match_content"
-        ohos:width="126vp"
+        ohos:width="match_parent"
         ohos:align_parent_bottom="true"
         ohos:bottom_margin="12vp"
         ohos:horizontal_center="true"
         ohos:orientation="vertical">
 
-        <Text
+        <Button
+            ohos:id="$+id:btn_form_goto_activity"
+            ohos:background_element="#aaaaaa"
+            ohos:padding="2vp"
+            ohos:start_margin="16vp"
+            ohos:text="Open Activity"
             ohos:height="match_content"
-            ohos:width="match_parent"
-            ohos:text="$string:widget_title"
-            ohos:text_color="#E5000000"
-            ohos:text_size="16fp"
-            ohos:text_weight="500"
-            ohos:truncation_mode="ellipsis_at_end"/>
+            ohos:width="match_content"/>
 
-        <Text
-            ohos:height="match_content"
-            ohos:width="match_parent"
-            ohos:text="$string:widget_introduction"
-            ohos:text_color="#99000000"
-            ohos:text_size="12fp"
-            ohos:text_weight="400"
-            ohos:top_margin="2vp"
-            ohos:truncation_mode="ellipsis_at_end"/>
     </DirectionalLayout>
+
 </DependentLayout>
