@@ -1,27 +1,46 @@
 package com.minkiapps.android.hybrid
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.widget.Toast
+import com.minkiapps.android.hybrid.databinding.ActivityMainBinding
 import timber.log.Timber
 
 class MainActivity : Activity() {
+
+    private lateinit var binding : ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        
-        findViewById<View>(R.id.btnMainActivityHelloWorld).setOnClickListener {
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
+        binding.btnMainActivityGotoAbility.setOnClickListener {
             Timber.d("Starting MainAbility")
             ConnectionUtil.startAbility(
                 this@MainActivity,
                 BUNDLE_NAME,
-                ABILITY_NAME
+                MAIN_ABILITY_NAME
             )
+        }
+
+        binding.btnMainActivityGotoAnotherActivity.setOnClickListener {
+            startActivity(Intent(this, AnotherActivity::class.java))
+        }
+
+        intent.getStringExtra("EXTRA_SOURCE")?.let {
+            binding.tvActivityMainSource.text = it
         }
     }
 
-    companion object {
-        private const val BUNDLE_NAME = "com.minkiapps.android.hybrid"
-        private const val ABILITY_NAME = "com.minkiapps.android.hybrid.MainAbility"
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+
+        Toast.makeText(this, "On new Intent", Toast.LENGTH_SHORT).show()
+        intent.getStringExtra("EXTRA_SOURCE")?.let {
+            binding.tvActivityMainSource.text = it
+        }
     }
 }

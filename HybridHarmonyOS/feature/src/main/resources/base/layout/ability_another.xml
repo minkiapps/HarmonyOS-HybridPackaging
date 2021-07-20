@@ -19,39 +19,13 @@
         />
 
     <Button
-        ohos:id="$+id:btn_ability_main_goto_another_ability"
+        ohos:id="$+id:btn_ability_another_goto_another_activity"
         ohos:padding="8vp"
         ohos:text_size="24vp"
         ohos:top_margin="32vp"
         ohos:layout_alignment="center"
         ohos:background_element="#aaaaaa"
-        ohos:text="Go to AnotherAbility"
-        ohos:height="match_content"
-        ohos:width="match_content"/>
-
-    <Button
-        ohos:id="$+id:btn_ability_main_goto_main_activity"
-        ohos:padding="8vp"
-        ohos:text_size="24vp"
-        ohos:top_margin="32vp"
-        ohos:layout_alignment="center"
-        ohos:background_element="#aaaaaa"
-        ohos:text="Go to MainActivity"
-        ohos:height="match_content"
-        ohos:width="match_content"/>
-
-    <Text
-        ohos:top_margin="24vp"
-        ohos:layout_alignment="center"
-        ohos:text_size="18vp"
-        ohos:text="Calling Source:"
-        ohos:height="match_content"
-        ohos:width="match_content"/>
-
-    <Text
-        ohos:layout_alignment="center"
-        ohos:text_size="24vp"
-        ohos:id="$+id:t_ability_main_source"
+        ohos:text="Go to AnotherActivity"
         ohos:height="match_content"
         ohos:width="match_content"/>
 

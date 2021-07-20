@@ -1,8 +1,8 @@
-package com.minkiapps.android.hybrid;
+package com.minkiapps.hos.hybrid;
 
-import com.minkiapps.android.hybrid.slice.MainAbilitySlice;
-import com.minkiapps.android.hybrid.widget.controller.FormController;
-import com.minkiapps.android.hybrid.widget.controller.FormControllerManager;
+import com.minkiapps.hos.hybrid.slice.MainAbilitySlice;
+import com.minkiapps.hos.hybrid.widget.controller.FormController;
+import com.minkiapps.hos.hybrid.widget.controller.FormControllerManager;
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
 import ohos.aafwk.ability.AbilitySlice;

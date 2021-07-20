@@ -1,4 +1,4 @@
-package com.minkiapps.android.hybrid.widget.controller;
+package com.minkiapps.hos.hybrid.widget.controller;
 
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.ability.ProviderFormInfo;

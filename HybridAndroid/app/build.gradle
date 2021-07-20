@@ -34,6 +34,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
     signingConfigs {
         debug {
             storeFile file(keystoreProperties['storeFile'])

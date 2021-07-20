@@ -19,9 +19,9 @@
     }
   },
   "module": {
-    "package": "com.minkiapps.android.hybrid",
-    "name": "com.minkiapps.android.hybrid.MyApplication",
-    "mainAbility": "com.minkiapps.android.hybrid.MainAbility",
+    "package": "com.minkiapps.hos.hybrid",
+    "name": "com.minkiapps.hos.hybrid.MyApplication",
+    "mainAbility": "com.minkiapps.hos.hybrid.MainAbility",
     "deviceType": [
       "phone",
       "tablet"
@@ -36,7 +36,7 @@
       {
         "orientation": "unspecified",
         "visible": true,
-        "name": "com.minkiapps.android.hybrid.MainAbility",
+        "name": "com.minkiapps.hos.hybrid.MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "formsEnabled": true,
@@ -65,6 +65,11 @@
           }
         ],
         "launchType": "standard"
+      },
+      {
+        "icon": "$media:icon",
+        "name": "com.minkiapps.hos.hybrid.AnotherAbility",
+        "type": "page"
       }
     ]
   }
