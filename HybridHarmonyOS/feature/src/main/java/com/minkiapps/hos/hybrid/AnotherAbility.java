@@ -27,7 +27,7 @@ public class AnotherAbility extends Ability {
                 .build();
         newIntent.setOperation(operation);
 
-        final ElementName elementName = new ElementName("", ANDROID_BUNDLE_NAME, ANDROID_ANOTHER_ABILITY_NAME);
+        final ElementName elementName = new ElementName("", ANDROID_PACKAGE_NAME, ANDROID_ANOTHER_ABILITY_NAME);
         newIntent.setElement(elementName);
 
         newIntent.setParam("EXTRA_SOURCE", "HarmonyOS");

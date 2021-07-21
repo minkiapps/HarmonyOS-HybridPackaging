@@ -7,7 +7,7 @@
 
     <Text
         ohos:padding="16vp"
-        ohos:top_margin="64vp"
+        ohos:top_margin="16vp"
         ohos:id="$+id:text_helloworld"
         ohos:height="match_content"
         ohos:width="match_parent"
@@ -22,7 +22,7 @@
         ohos:id="$+id:btn_ability_main_goto_another_ability"
         ohos:padding="8vp"
         ohos:text_size="24vp"
-        ohos:top_margin="32vp"
+        ohos:top_margin="16vp"
         ohos:layout_alignment="center"
         ohos:background_element="#aaaaaa"
         ohos:text="Go to AnotherAbility"
@@ -51,8 +51,50 @@
     <Text
         ohos:layout_alignment="center"
         ohos:text_size="24vp"
+        ohos:text="Default"
         ohos:id="$+id:t_ability_main_source"
         ohos:height="match_content"
         ohos:width="match_content"/>
+
+    <DirectionalLayout
+        ohos:orientation="horizontal"
+        ohos:padding="8vp"
+        ohos:height="match_content"
+        ohos:width="match_parent">
+
+        <Image
+            ohos:padding="8vp"
+            ohos:id="$+id:i_ability_main_appgallery"
+            ohos:scale_mode="stretch"
+            ohos:image_src="$media:appgallery"
+            ohos:height="80vp"
+            ohos:width="80vp"/>
+
+        <Image
+            ohos:padding="8vp"
+            ohos:id="$+id:i_ability_main_sofascore"
+            ohos:scale_mode="stretch"
+            ohos:image_src="$media:sofascore"
+            ohos:height="80vp"
+            ohos:width="80vp"/>
+
+    </DirectionalLayout>
+
+    <Text
+        ohos:text_size="16vp"
+        ohos:start_padding="16vp"
+        ohos:end_padding="16vp"
+        ohos:text="Available Devices:"
+        ohos:height="match_content"
+        ohos:width="match_parent"/>
+
+    <Text
+        ohos:text_size="14vp"
+        ohos:start_padding="16vp"
+        ohos:end_padding="16vp"
+        ohos:multiple_lines="true"
+        ohos:id="$+id:t_ability_main_device_list"
+        ohos:height="match_content"
+        ohos:width="match_parent"/>
 
 </DirectionalLayout>

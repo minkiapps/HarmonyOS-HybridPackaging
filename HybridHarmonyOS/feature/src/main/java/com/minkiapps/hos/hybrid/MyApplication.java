@@ -4,7 +4,7 @@ import ohos.aafwk.ability.AbilityPackage;
 
 public class MyApplication extends AbilityPackage {
 
-    public static final String ANDROID_BUNDLE_NAME = "com.minkiapps.android.hybrid";
+    public static final String ANDROID_PACKAGE_NAME = "com.minkiapps.android.hybrid";
 
     public static final String ANDROID_MAIN_ABILITY_NAME = "com.minkiapps.android.hybrid.MainActivity";
     public static final String ANDROID_ANOTHER_ABILITY_NAME = "com.minkiapps.android.hybrid.AnotherActivity";

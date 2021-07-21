@@ -42,7 +42,7 @@ public class MainAbility extends Ability {
         final Operation operation = new Intent.OperationBuilder()
                 .withFlags(Intent.FLAG_NOT_OHOS_COMPONENT)
                 .withDeviceId("")
-                .withBundleName(MyApplication.ANDROID_BUNDLE_NAME)
+                .withBundleName(MyApplication.ANDROID_PACKAGE_NAME)
                 .withAbilityName(MyApplication.ANDROID_ANOTHER_ABILITY_NAME)
                 .build();
         intent.setOperation(operation);

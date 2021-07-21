@@ -71,6 +71,26 @@
         "name": "com.minkiapps.hos.hybrid.AnotherAbility",
         "type": "page"
       }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.DISTRIBUTED_DEVICE_STATE_CHANGE"
+      },
+      {
+        "name": "ohos.permission.GET_DISTRIBUTED_DEVICE_INFO"
+      },
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO"
+      },
+      {
+        "name": "ohos.permission.INTERNET"
+      },
+      {
+        "name": "ohos.permission.ACCESS_SERVICE"
+      },
+      {
+        "name": "ohos.permission.DISTRIBUTED_DATASYNC"
+      }
     ]
   }
 }
