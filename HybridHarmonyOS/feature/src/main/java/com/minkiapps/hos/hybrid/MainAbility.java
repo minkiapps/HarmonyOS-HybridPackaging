@@ -6,12 +6,14 @@ import ohos.aafwk.content.Intent;
 import ohos.aafwk.ability.ProviderFormInfo;
 import ohos.aafwk.content.Operation;
 import ohos.agp.components.ComponentProvider;
+import ohos.bundle.IBundleManager;
 import ohos.event.intentagent.IntentAgent;
 import ohos.event.intentagent.IntentAgentConstant;
 import ohos.event.intentagent.IntentAgentHelper;
 import ohos.event.intentagent.IntentAgentInfo;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
+import ohos.security.SystemPermission;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +26,11 @@ public class MainAbility extends Ability {
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setMainRoute(MainAbilitySlice.class.getName());
-        stopAbility(intent);
+
+        if (verifySelfPermission(SystemPermission.DISTRIBUTED_DATASYNC) != IBundleManager.PERMISSION_GRANTED) {
+            //申请权限之后需要到Ability处理权限请求结果
+            requestPermissionsFromUser(new String[]{SystemPermission.DISTRIBUTED_DATASYNC}, 0);
+        }
     }
 
     @Override

@@ -67,6 +67,7 @@
         "launchType": "standard"
       },
       {
+        "visible": true,
         "icon": "$media:icon",
         "name": "com.minkiapps.hos.hybrid.AnotherAbility",
         "type": "page"

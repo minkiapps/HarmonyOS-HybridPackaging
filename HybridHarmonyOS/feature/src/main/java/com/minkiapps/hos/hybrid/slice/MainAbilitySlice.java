@@ -58,13 +58,6 @@ public class MainAbilitySlice extends AbilitySlice {
 
     private void startAbility(final String bundleName, final String abilityName) {
         final Intent i = new Intent();
-
-        final Operation operation = new Intent.OperationBuilder()
-                .withBundleName(bundleName)
-                .withAbilityName(abilityName)
-                .build();
-
-        //i.setOperation(operation);
         i.setElementName(bundleName, abilityName);
         i.addFlags(Intent.FLAG_ABILITYSLICE_MULTI_DEVICE);
         startAbility(i);
