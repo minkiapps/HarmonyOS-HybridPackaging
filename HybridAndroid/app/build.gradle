@@ -1,10 +1,5 @@
-// App Hybrid
 plugins {
-    id 'com.huawei.ohos.lion'
-}
-
-
-plugins {
+    id 'com.huawei.ohos.lion' // App Hybrid
     id 'com.android.application'
     id 'kotlin-android'
 }
@@ -71,14 +66,11 @@ android {
     sourceSets {
         main {
             if (harmonySupport) {
-                // 不需要修改manifest.srcFile
                 manifest.srcFile 'build/tmp/ohosAndroidManifest/AndroidManifest.xml'
             }
             java {
                 if (harmonySupport) {
-                    // 不需要修改srcDirs
                     srcDirs 'build/tmp/ohosSubApplicationClass'
-                    // 与 subApplicationClass保持一致
                     exclude applicationClassPath
                 }
             }

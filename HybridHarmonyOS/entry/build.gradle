@@ -28,14 +28,15 @@ ohos {
     // AppHybrid
     legacyApkOptions {
         signConfig {
+            //path to Android keystore
             storeFile file("../../HybridAndroid/signing/minkiapps.jks")
-            // 单独配置的shell apk签名材料
         }
-        //legacyApk "/Users/mingkangpan/Documents/minki/code/A_H/HybridAppExample/HybridAndroid/app/build/outputs/apk/debug/debug-1.0-entry.apk"
+
+        //path to legacy apk
         legacyApk "../../HybridAndroid/app/build/outputs/apk/debug/debug-entry.apk"
-        // 指向legecyApk文件
-        legacyVersionCode "1" // 与legacyApk的AndroidManifest.xml中配置的android:versionCode保持一致
-        legacyVersionName "1.0" // 与legacyApk的AndroidManifest.xml中配置的android:versionName保持一致
+
+        legacyVersionCode "1" //must be same as in Android Manifest
+        legacyVersionName "1.0" //must be same as in Android Manifest
     }
 }
 
